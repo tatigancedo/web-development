@@ -1,0 +1,214 @@
+/**
+* Boards of Canada Discography
+* Developed By: Tatiana Gancedo
+**/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/**
+* General Styles
+**/
+
+html {
+  --blue: #699faa;
+  --yellow: #d0e5a7;
+  --font-sans-serif: 'Comfortaa', sans-serif;
+}
+
+body, h2 {
+  font-family: var(--font-sans-serif);
+  color: var(--yellow);
+  background-color: var(--blue);
+  font-size: 3rem;
+  letter-spacing: -2px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: -5px;
+  width: 500px;
+  font-weight: normal;
+  margin: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--yellow);
+  margin: auto 0;
+}
+
+i {
+  font-size: 70px;
+  align-self: center;
+}
+
+/**
+* Grid
+**/
+
+.album {
+  display: grid;
+  border: 4px solid var(--yellow);
+  border-radius: 6rem;
+  grid-template-columns: .5fr 3fr 1fr;
+  padding: 0 3rem;
+  grid-gap: 1rem;
+  position: relative;
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(400px, 1fr));
+  grid-gap: 2rem;
+  margin: 2rem;
+  padding: 2rem 0;
+}
+
+.album img {
+  display: none;
+  width: 400px;
+}
+
+/**
+* Hover Image Positions
+**/
+
+#children:hover img {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+
+#geogaddi:hover img {
+  display: block;
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+}
+
+#campfire:hover img {
+  display: block;
+  position: absolute;
+  right: 200px;
+  bottom: 10px;
+}
+
+#harvest:hover img {
+  display: block;
+  position: absolute;
+  right: 100px;
+  bottom: -100px;
+}
+
+#twoism:hover img {
+  display: block;
+  position: absolute;
+  right: 200px;
+  bottom: 20px;
+}
+
+#scores:hover img {
+  display: block;
+  position: absolute;
+  right: 150px;
+  bottom: 20px;
+}
+
+#aquarius:hover img {
+  display: block;
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+}
+
+#peel:hover img {
+  display: block;
+  position: absolute;
+  right: 200px;
+  bottom: 0px;
+}
+
+#beautiful:hover img {
+  display: block;
+  position: absolute;
+  right: 200px;
+  bottom: 20px;
+}
+
+#highway:hover img {
+  display: block;
+  position: absolute;
+  right: 200px;
+  bottom: -100px;
+}
+
+/**
+* About
+**/
+
+.about {
+  background-color: var(--yellow);
+  color: var(--blue);
+  padding: 3rem 2rem;
+}
+
+.about p {
+  width: auto;
+  margin: 0;
+}
+
+.about--heading {
+  background-color: var(--yellow);
+  color: var(--blue);
+  padding-bottom: 1rem;
+  padding-top: 0;
+}
+
+/**
+* Footer
+**/
+
+footer {
+  font-size: small;
+  letter-spacing: normal;
+  padding: 0 2rem;
+  line-height: 1.2rem;
+}
+
+/**
+* Mobile
+**/
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  .albums .album {
+    display: block;
+  }
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .albums p {
+    margin: 1rem;
+  }
+  i {
+    font-size: 50px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+}
